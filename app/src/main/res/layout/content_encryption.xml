@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="60dp"
+    tools:context="com.htbridge.pivaa.EncryptionActivity"
+    tools:showIn="@layout/activity_encryption">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- Weak hashing algorithms -->
+            <TextView
+                android:id="@+id/header_hashing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Weak hashing algorithms"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="The mobile application uses weak hashing algorithms. Weak hashing algorithms (e.g. MD2, MD4, MD5 or SHA-1) can be vulnerable to collisions and other security weaknesses, and should not be used when reliable hashing of data is required."
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/value_hashing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@string/value_for_hashing" />
+
+            <Button
+                android:id="@+id/button_hashing"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="HASH IT (MD5)" />
+            <EditText
+                android:id="@+id/hashing_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:text="" />
+
+
+
+            <!-- Weak RNG -->
+            <TextView
+                android:id="@+id/header_rng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Predictable Random Number Generator"
+                android:paddingTop="50dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="The mobile application uses predictable Random Number Generator. Under certain conditions this can jeopardize the entire data encryption performed by the mobile application."
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button_rng"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="Generate" />
+            <EditText
+                android:id="@+id/rng_result"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                tools:layout_editor_absoluteY="84dp" />
+
+
+
+            <!-- Encryption AES/ECB -->
+            <TextView
+                android:id="@+id/header_encryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="50dp"
+                android:text="Weak encryption (AES/CBC/PKCS5Padding)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Weak or badly implemented encryption algorithms can endanger data storage and transmission used by the mobile application."
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/plaintext_encryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Plaintext for encryption" />
+
+            <Button
+                android:id="@+id/button_encryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Encrypt" />
+
+            <EditText
+                android:id="@+id/cipher_encryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Cipher text" />
+
+
+
+
+
+
+            <!-- Decryption AES/ECB -->
+            <TextView
+                android:id="@+id/header_decryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="50dp"
+                android:text="Weak decryption (AES/CBC/PKCS5Padding)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Weak or badly implemented encryption algorithms can endanger data storage and transmission used by the mobile application."
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/cipher_decryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Cipher text" />
+
+            <Button
+                android:id="@+id/button_decryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Decrypt" />
+
+
+            <EditText
+                android:id="@+id/plaintext_decryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Plaintext of decryption" />
+
+
+
+
+            <!-- Weak IV -->
+            <TextView
+                android:id="@+id/header_weak_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="50dp"
+                android:text="Usage of weak Initialization Vector"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="When Cipher Block Chaining (CBC) or Cipher Feedback (CFB) modes are used in encryption, the Initialization Vector must be unpredictable and random."
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/plaintext_weak_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Plaintext for encryption" />
+
+            <EditText
+                android:id="@+id/initialization_vector_weak_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="false"
+                android:ems="10"
+                android:enabled="false"
+                android:focusedByDefault="false"
+                android:inputType="textPersonName"
+                android:text="byte[] IV = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }" />
+
+            <Button
+                android:id="@+id/button_weak_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Encrypt with weak IV" />
+
+            <EditText
+                android:id="@+id/cipher_weak_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Cipher text" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PIVAA</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_username">This username is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_encryption">Encryption Vulnerabilities</string>
+    <string name="hash_it">Hash it</string>
+    <string name="value_for_hashing">Value for MD5 hashing</string>
+    <string name="title_activity_webview">WebView Vulnerabilities</string>
+    <string name="action_settings">Vulnerability groups</string>
+    <string name="webview_url_hint">URL to navigate to</string>
+    <string name="title_activity_database">Database Vulnerabilities</string>
+    <string name="title_activity_load_code">Dynamic load of code</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_service">Service</string>
+    <string name="title_activity_broadcast_receiver">Broadcast Receiver</string>
+    <string name="title_activity_serialize">Serialize</string>
+    <string name="title_activity_content_provider">Content Provider</string>
+</resources>

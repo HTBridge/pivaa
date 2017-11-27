@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="60dp"
+    tools:context="com.htbridge.pivaa.BroadcastReceiverActivity"
+    tools:showIn="@layout/activity_broadcast_receiver">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Exported Broadcast Receivers"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="The mobile application contains an exported receiver enabling other applications, including malicious ones, to send intents without restrictions. By default, Broadcast Receivers is exported in Android, as the result any application will be able to send an intent to the Broadcast Receiver of the application. To define which applications can send intents to mobile application’s Broadcast Receiver set relevant permissions in the Android Manifest file."
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="20sp"
+                android:textStyle="bold"
+                android:text="Vulnerable broadcast receiver and sender. Broadcast sender is sending intel about the usage of the application by the user (like log): 'application started', 'admin is connected', 'admin deleted an entry fromthe DB', 'admin user'... The broadcast receiver is writing all these broadcast in LOG.txt file. So any app can see log intel and any app can write text LOG.TXT"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="20sp"
+                android:textStyle="bold"
+                android:text="In order to send broadcast manually, type following in the console: "
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="monospace"
+                android:textSize="12sp"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="2"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical"
+                android:editable="false"
+                android:text="adb shell am broadcast -a service.vulnerable.vulnerableservice.LOG --es data “TEST”" />
+
+
+
+            <EditText
+                android:layout_marginTop="60sp"
+                android:id="@+id/input_broadcast_receiver"
+                android:inputType="text"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="Some text you want to see in file..." />
+
+
+            <Button
+                    android:id="@+id/button_broadcast_receiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send broadcast"
+                    android:layout_marginBottom="20sp"
+                    android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000000">
+            </View>
+            <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/webview_broadcast_receiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000000">
+            </View>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</LinearLayout>

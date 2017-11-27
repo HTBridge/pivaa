@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings">
+
+        <item android:id="@+id/action_login" android:title="Login"/>
+        <item android:id="@+id/action_encryption" android:title="Encryption"/>
+        <item android:id="@+id/action_webview" android:title="WebView"/>
+        <item android:id="@+id/action_database" android:title="Database"/>
+        <item android:id="@+id/action_load_code" android:title="Dynamic Load of Code"/>
+        <item android:id="@+id/action_service" android:title="Service"/>
+        <item android:id="@+id/action_broadcast_receiver" android:title="Broadcast Receiver"/>
+        <item android:id="@+id/action_serialize" android:title="Serialize Data"/>
+        <item android:id="@+id/action_content_provider" android:title="Content Provider"/>
+        <item android:id="@+id/action_about"  android:title="About project"/>
+
+    </item>
+
+</menu>
