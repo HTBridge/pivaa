@@ -5,7 +5,7 @@ For bench-marking testing, we created a Purposefully Insecure and Vulnerable And
 
 Easiest way is to import the project into Android Studio.
 
- * Clone the repo: ´git clone github.com/HTbridge/pivaa´
+ * Clone the repo: ```git clone github.com/HTbridge/pivaa```
  * Open the project in Android Studio
  * Build -> Make Project
 
@@ -18,7 +18,7 @@ You can install it as any other Android applications.
  * Build or download the application
  * Allow installation of unknown sources on your emulator or phone
  * If it is a real phone, enable USB debugging
- * Connect it and run ´adb install pivaa.apk´
+ * Connect it and run ```adb install pivaa.apk```
 
 ## Vulnerabilities covered
   
