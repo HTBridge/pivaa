@@ -1,5 +1,5 @@
 # Purposefully Insecure and Vulnerable Android Application
-For bench-marking testing, we created a Purposefully Insecure and Vulnerable Android Application (PIVAA) to replace quite outdated DIVA.
+Created by [High-Tech Bridge](https://www.htbridge.com), the Purposefully Insecure and Vulnerable Android Application (PIVAA) replaces outdated DIVA for benchmark of mobile vulnerability scanners. You can use [free online mobile app scanner](https://www.htbridge.com/mobile) to run the test and compare with other apps.
 
 ## How to build
 
