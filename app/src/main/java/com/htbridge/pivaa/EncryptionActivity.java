@@ -97,7 +97,7 @@ public class EncryptionActivity extends AppCompatActivity {
         });
 
 
-        // Decryption AES/CBC/PKCS5Padding
+        // Encryption AES/CBC/PKCS5Padding (Weak IV)
         Button mWeakIVButton = (Button) findViewById(R.id.button_weak_iv);
         mWeakIVButton.setOnClickListener(new View.OnClickListener() {
 
@@ -115,6 +115,27 @@ public class EncryptionActivity extends AppCompatActivity {
             }
 
         });
+
+
+        // Decryption AES/ECB/PKCS5Padding
+        Button mDecryptionButton = (Button) findViewById(R.id.button_decryption);
+        mDecryptionButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Log.i("htbridge", "Clicked decrypt button");
+
+                EditText mDecryptionPlaintextView = (EditText) findViewById(R.id.plaintext_decryption);
+                EditText mDecryptionCipherView = (EditText) findViewById(R.id.cipher_decryption);
+
+                String value = mDecryptionCipherView.getText().toString();
+                String decryptionResult = Encryption.decryptAES_ECB_PKCS5Padding(value);
+
+                mDecryptionPlaintextView.setText(decryptionResult, TextView.BufferType.EDITABLE);
+            }
+
+        });
+
     }
 
 }
